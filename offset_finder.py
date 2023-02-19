@@ -1,6 +1,6 @@
 """
 Script that is responsible for looking through our SDK and determining
-all of the offsets we specify automatically. Can that pass the output file
+all the offsets we specify automatically. Can that pass the output file
 into the SoT ESP Framework
 @Author https://github.com/DougTheDruid
 @Source https://github.com/DougTheDruid/SoT-Python-Offset-Finder
@@ -70,6 +70,7 @@ if __name__ == '__main__':
 
         "Actor.rootComponent": get_offset(ENGINE, "Actor", "RootComponent"),
         "CameraCacheEntry.MinimalViewInfo": get_offset(ENGINE_STRUCT, "CameraCacheEntry", "POV"),
+        "CrewService.Crews": get_offset(ATHENA, "CrewService", "Crews"),
         "Crew.Size": get_size(ATHENA_STRUCT, "Crew"),
         "Crew.Players": get_offset(ATHENA_STRUCT, "Crew", "Players"),
         "GameInstance.LocalPlayers": get_offset(ENGINE, "GameInstance", "LocalPlayers"),
