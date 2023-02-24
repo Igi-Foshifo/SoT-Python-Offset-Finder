@@ -15,6 +15,8 @@ ENGINE = "SDKs\\JSON-SDK\\Engine_Classes.json"
 ATHENA_AI = "SDKs\\JSON-SDK\\AthenaAI_Classes.json"
 ENGINE_STRUCT = "SDKs\\JSON-SDK\\Engine_Structs.json"
 ATHENA_STRUCT = "SDKs\\JSON-SDK\\Athena_structs.json"
+SESSION = "SDKs\\JSON-SDK\\Sessions_Classes.json"
+SESSION_STRUCT = "SDKs\\JSON-SDK\\Sessions_Structs.json"
 
 
 def get_offset(file_name, title, memory_object):
@@ -70,7 +72,6 @@ if __name__ == '__main__':
 
         "Actor.rootComponent": get_offset(ENGINE, "Actor", "RootComponent"),
         "CameraCacheEntry.MinimalViewInfo": get_offset(ENGINE_STRUCT, "CameraCacheEntry", "POV"),
-        "CrewService.Crews": get_offset(ATHENA, "CrewService", "Crews"),
         "Crew.Size": get_size(ATHENA_STRUCT, "Crew"),
         "Crew.Players": get_offset(ATHENA_STRUCT, "Crew", "Players"),
         "GameInstance.LocalPlayers": get_offset(ENGINE, "GameInstance", "LocalPlayers"),
@@ -81,6 +82,13 @@ if __name__ == '__main__':
         "World.OwningGameInstance": get_offset(ENGINE, "World", "OwningGameInstance"),
         "World.PersistentLevel": get_offset(ENGINE, "World", "PersistentLevel"),
 
+        "CrewService.Crews": get_offset(ATHENA, "CrewService", "Crews"),
+        "CrewSessionTemplate.MaxMatchmakingPlayers": get_offset(SESSION_STRUCT, "CrewSessionTemplate", "MaxMatchmakingPlayers"),
+        "Ship.CrewOwnershipComponent": get_offset(ATHENA, "Ship", "CrewOwnershipComponent"),
+        "CrewOwnershipComponent.CachedCrewId": get_offset(ATHENA, "CrewOwnershipComponent", "CachedCrewId"),
+        "MapTable.MapPins": get_offset(ATHENA, "MapTable", "MapPins"),
+        "DrowningComponent.OxygenLevel": get_offset(ATHENA, "DrowningComponent", "OxygenLevel"),
     }
+
     with open("offsets.json", "w+") as outfile:
         outfile.write(json.dumps(output, indent=2, sort_keys=True))
