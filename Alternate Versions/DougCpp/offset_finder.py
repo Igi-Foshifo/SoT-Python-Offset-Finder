@@ -71,5 +71,5 @@ if __name__ == '__main__':
         "APlayerCameraManager.CameraCache": get_offset(ENGINE, "// Class Engine.PlayerCameraManager", "CameraCache"),
         "FCameraCacheEntry.FMinimalViewInfo": get_offset(ENGINE_STRUCT, "// ScriptStruct Engine.CameraCacheEntry", "POV"),
     }
-    with open("../../offsets.json", "w+") as outfile:
+    with open("../../../SoT-ESP-Framework/data/offsets.json", "w+") as outfile:
         outfile.write(json.dumps(output, indent=2, sort_keys=True))
