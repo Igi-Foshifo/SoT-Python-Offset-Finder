@@ -86,9 +86,15 @@ if __name__ == '__main__':
         "CrewSessionTemplate.MaxMatchmakingPlayers": get_offset(SESSION_STRUCT, "CrewSessionTemplate", "MaxMatchmakingPlayers"),
         "Ship.CrewOwnershipComponent": get_offset(ATHENA, "Ship", "CrewOwnershipComponent"),
         "CrewOwnershipComponent.CachedCrewId": get_offset(ATHENA, "CrewOwnershipComponent", "CachedCrewId"),
+
         "MapTable.MapPins": get_offset(ATHENA, "MapTable", "MapPins"),
+
+        "PlayerController.Pawn": get_offset(ENGINE, "PlayerController", "AcknowledgedPawn"),
+        "Pawn.Size": get_size(ENGINE, "Pawn"),
+
+        "AthenaPlayerCharacter.DrowningComponent": get_offset(ATHENA, "AthenaPlayerCharacter", "DrowningComponent"),
         "DrowningComponent.OxygenLevel": get_offset(ATHENA, "DrowningComponent", "OxygenLevel"),
     }
 
-    with open("offsets.json", "w+") as outfile:
+    with open("../SoT-ESP-Framework/data/offsets.json", "w+") as outfile:
         outfile.write(json.dumps(output, indent=2, sort_keys=True))
