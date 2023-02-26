@@ -71,27 +71,31 @@ if __name__ == '__main__':
         # SDK Generator is incapable of pulling this automatically, may need to fix if you have issues
 
         "Actor.rootComponent": get_offset(ENGINE, "Actor", "RootComponent"),
-        "CameraCacheEntry.MinimalViewInfo": get_offset(ENGINE_STRUCT, "CameraCacheEntry", "POV"),
-        "Crew.Size": get_size(ATHENA_STRUCT, "Crew"),
-        "Crew.Players": get_offset(ATHENA_STRUCT, "Crew", "Players"),
-        "GameInstance.LocalPlayers": get_offset(ENGINE, "GameInstance", "LocalPlayers"),
-        "LocalPlayer.PlayerController": get_offset(ENGINE, "Player", "PlayerController"),
-        "PlayerCameraManager.CameraCache": get_offset(ENGINE, "PlayerCameraManager", "CameraCache"),
-        "PlayerController.CameraManager": get_offset(ENGINE, "PlayerController", "PlayerCameraManager"),
-        "PlayerState.PlayerName": get_offset(ENGINE, "PlayerState", "PlayerName"),
         "World.OwningGameInstance": get_offset(ENGINE, "World", "OwningGameInstance"),
         "World.PersistentLevel": get_offset(ENGINE, "World", "PersistentLevel"),
 
+        "GameInstance.LocalPlayers": get_offset(ENGINE, "GameInstance", "LocalPlayers"),
+        "LocalPlayer.PlayerController": get_offset(ENGINE, "Player", "PlayerController"),
+
+        "PlayerController.CameraManager": get_offset(ENGINE, "PlayerController", "PlayerCameraManager"),
+        "PlayerCameraManager.CameraCache": get_offset(ENGINE, "PlayerCameraManager", "CameraCache"),
+        "CameraCacheEntry.MinimalViewInfo": get_offset(ENGINE_STRUCT, "CameraCacheEntry", "POV"),
+
+        "PlayerState.PlayerName": get_offset(ENGINE, "PlayerState", "PlayerName"),
+        "PlayerController.Pawn": get_offset(ENGINE, "PlayerController", "AcknowledgedPawn"),
+        "Pawn.Size": get_size(ENGINE, "Pawn"),
+
         "CrewService.Crews": get_offset(ATHENA, "CrewService", "Crews"),
-        "CrewSessionTemplate.MaxMatchmakingPlayers": get_offset(SESSION_STRUCT, "CrewSessionTemplate", "MaxMatchmakingPlayers"),
+        "Crew.Size": get_size(ATHENA_STRUCT, "Crew"),
+        "Crew.Players": get_offset(ATHENA_STRUCT, "Crew", "Players"),
+        "Crew.CrewSessionTemplate": get_offset(ATHENA_STRUCT, "Crew", "CrewSessionTemplate"),
+        "CrewSessionTemplate.MaxMatchmakingPlayers":
+            get_offset(SESSION_STRUCT, "CrewSessionTemplate", "MaxMatchmakingPlayers"),
+
         "Ship.CrewOwnershipComponent": get_offset(ATHENA, "Ship", "CrewOwnershipComponent"),
         "CrewOwnershipComponent.CachedCrewId": get_offset(ATHENA, "CrewOwnershipComponent", "CachedCrewId"),
 
         "MapTable.MapPins": get_offset(ATHENA, "MapTable", "MapPins"),
-
-        "PlayerController.Pawn": get_offset(ENGINE, "PlayerController", "AcknowledgedPawn"),
-        "Pawn.Size": get_size(ENGINE, "Pawn"),
-
         "AthenaPlayerCharacter.DrowningComponent": get_offset(ATHENA, "AthenaPlayerCharacter", "DrowningComponent"),
         "DrowningComponent.OxygenLevel": get_offset(ATHENA, "DrowningComponent", "OxygenLevel"),
     }
