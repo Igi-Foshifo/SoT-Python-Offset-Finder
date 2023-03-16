@@ -92,6 +92,7 @@ if __name__ == '__main__':
         "CrewSessionTemplate.MaxMatchmakingPlayers":
             get_offset(SESSION_STRUCT, "CrewSessionTemplate", "MaxMatchmakingPlayers"),
 
+        "AthenaCharacter.ShipTrackerComponent": get_offset(ATHENA, "AthenaCharacter", "ShipTrackerComponent"),
         "Ship.CrewOwnershipComponent": get_offset(ATHENA, "Ship", "CrewOwnershipComponent"),
         "CrewOwnershipComponent.CachedCrewId": get_offset(ATHENA, "CrewOwnershipComponent", "CachedCrewId"),
 
